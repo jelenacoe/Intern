@@ -16,9 +16,9 @@ namespace Internship1.Models
         public string AckMode { get; set; }
         public string SystemReactionMode { get; set; }
         public DisplayTitle DisplayTitle { get; set; }
-        public Param1 Param1 { get; set; }
-        public Param2 Param2 { get; set; }
-        public Param3 Param3 { get; set; }
+        public Param Param1 { get; set; }
+        public Param Param2 { get; set; }
+        public Param Param3 { get; set; }
 
     }
 }

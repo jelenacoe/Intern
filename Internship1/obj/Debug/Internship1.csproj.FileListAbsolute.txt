@@ -76,8 +76,15 @@ C:\Users\Korisnik\source\repos\Internship1\Internship1\bin\System.Web.WebPages.R
 C:\Users\Korisnik\source\repos\Internship1\Internship1\bin\Newtonsoft.Json.xml
 C:\Users\Korisnik\source\repos\Internship1\Internship1\bin\Antlr3.Runtime.pdb
 C:\Users\Korisnik\source\repos\Internship1\Internship1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Korisnik\source\repos\Internship1\Internship1\obj\Debug\Internship1.csprojAssemblyReference.cache
 C:\Users\Korisnik\source\repos\Internship1\Internship1\obj\Debug\Internship1.csproj.CoreCompileInputs.cache
 C:\Users\Korisnik\source\repos\Internship1\Internship1\obj\Debug\Internship1.csproj.CopyComplete
 C:\Users\Korisnik\source\repos\Internship1\Internship1\obj\Debug\Internship1.dll
 C:\Users\Korisnik\source\repos\Internship1\Internship1\obj\Debug\Internship1.pdb
+C:\Users\Korisnik\source\repos\Internship1\Internship1\bin\CsvHelper.dll
+C:\Users\Korisnik\source\repos\Internship1\Internship1\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Korisnik\source\repos\Internship1\Internship1\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Korisnik\source\repos\Internship1\Internship1\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\Korisnik\source\repos\Internship1\Internship1\bin\CsvHelper.xml
+C:\Users\Korisnik\source\repos\Internship1\Internship1\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Korisnik\source\repos\Internship1\Internship1\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Korisnik\source\repos\Internship1\Internship1\bin\System.Threading.Tasks.Extensions.xml
