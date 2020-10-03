@@ -146,9 +146,7 @@
     </Compile>
     <Compile Include="Models\DisplayTitle.cs" />
     <Compile Include="Models\MessageDefinition.cs" />
-    <Compile Include="Models\Param1.cs" />
-    <Compile Include="Models\Param2.cs" />
-    <Compile Include="Models\Param3.cs" />
+    <Compile Include="Models\Param.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

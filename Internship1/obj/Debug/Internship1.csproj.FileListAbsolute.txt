@@ -88,3 +88,4 @@ C:\Users\Korisnik\source\repos\Internship1\Internship1\bin\CsvHelper.xml
 C:\Users\Korisnik\source\repos\Internship1\Internship1\bin\Microsoft.Bcl.AsyncInterfaces.xml
 C:\Users\Korisnik\source\repos\Internship1\Internship1\bin\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Korisnik\source\repos\Internship1\Internship1\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\Korisnik\source\repos\Internship1\Internship1\obj\Debug\Internship1.csprojAssemblyReference.cache

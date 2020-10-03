@@ -7,43 +7,34 @@ using System.Web.Mvc;
 using Internship1.Models;
 using System.IO;
 using Newtonsoft.Json;
+using System.Web.Script.Serialization;
 
 namespace Internship1.Controllers
 {
     public class MessageDefinitionController : Controller
     {
         // GET: MessageDefinition
-        [HttpPost]
         public ActionResult Index()
         {
-           //string jsonResult = "";
-            //List<MessageDefinition> messageDefinitions = new List<MessageDefinition>()
-           
 
-
-            var csv_file_path = @"C:\Users\Korisnik\Desktop\MessageDefinition.csv";
-            string text = System.IO.File.ReadAllText(csv_file_path);
-
-            var lines = text.Split(',');
+            var csv_file_path = @"C:\Users\Korisnik\Desktop\Posao\Internship - Execom\MessageDefinition.csv";
+            string[] lines = System.IO.File.ReadAllLines(csv_file_path);
             List<MessageDefinition> messageDefinitions = new List<MessageDefinition>();
-
-            for (int i = 0; i < lines.Length; i += 36)
+            for (int i = 1; i < lines.Length; i++)
             {
-                /*MessageDef msgdef = new MessageDef(param1, param2);
-                 * messageDefomotopms.add(msgdef);
-                 */
-                var param1 = lines[i + 0];
-                var param2 = lines[i + 1];
-                
-                MessageDefinition msgdef = new MessageDefinition();
-                messageDefinitions.Add(msgdef);
-                
-
+                string[] line = lines[i].Split(',');
+                MessageDefinition obj = new MessageDefinition();
+                obj.Number = Convert.ToInt32(line[0]);
+                obj.Title = line[1];
+                obj.ComponentType = line[2];
+                obj.Class = line[3];
+                obj.Level = line[4];
+                messageDefinitions.Add(obj);
             }
-           
-            //string strResultJson = JsonConvert.DeserializeObject<MessageDefinition>();
-            //File.WriteAllText(strReslutJson);
-            
+            var serializer = new JavaScriptSerializer();
+            var serializedResult = serializer.Serialize(messageDefinitions);
+            ViewBag.json = serializedResult;
+
 
             return View();
         }
