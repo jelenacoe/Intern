@@ -8,6 +8,8 @@ using Internship1.Models;
 using System.IO;
 using Newtonsoft.Json;
 using System.Web.Script.Serialization;
+using System.Text;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Internship1.Controllers
 {
@@ -59,11 +61,16 @@ namespace Internship1.Controllers
             }
                
             var serializer = new JavaScriptSerializer();
-            var serializedResult = serializer.Serialize(messageDefinitions);
+            string serializedResult = serializer.Serialize(messageDefinitions);
+            string json_pretty = JSON_PrettyPrinter.Process(serializedResult);
             ViewBag.json = serializedResult;
 
+            System.IO.File.WriteAllText(@"C:\Users\Korisnik\Desktop\Posao\Internship - Execom\novo.json", json_pretty);
 
-            return View();
+            
+            
+             return View();
         }
+
     }
 }

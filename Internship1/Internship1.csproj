@@ -146,6 +146,7 @@
     </Compile>
     <Compile Include="Models\DisplayDetails.cs" />
     <Compile Include="Models\DisplayTitle.cs" />
+    <Compile Include="Models\JSON_PrettyPrinter.cs" />
     <Compile Include="Models\MessageDefinition.cs" />
     <Compile Include="Models\Param.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
