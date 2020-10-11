@@ -8,6 +8,7 @@ using System.Web.Script.Serialization;
 using System.Text;
 using System.Security.Cryptography.X509Certificates;
 using System.Web.Mvc;
+using System.Text.Json;
 using Internship1.Models;
 
 
@@ -18,13 +19,17 @@ namespace Internship1.Service
         public static string ExportJSON(List<MessageDefinition> list)
         {
 
-            var serializer = new JavaScriptSerializer();
-            string serializedResult = serializer.Serialize(list);
-            string json_pretty = JSON_PrettyPrinter.Process(serializedResult);
+            
+            JsonSerializerOptions options = new JsonSerializerOptions
+            {
+                WriteIndented = true
+            };
+            var serializedResult = System.Text.Json.JsonSerializer.Serialize(list, options);
+            
             
 
-            System.IO.File.WriteAllText(@"C:\Users\Korisnik\Desktop\Posao\Internship - Execom\new.json", json_pretty);
-            return json_pretty;
+            System.IO.File.WriteAllText(@"C:\Users\Korisnik\Desktop\Posao\Internship - Execom\new.json", serializedResult);
+            return serializedResult;
 
         }
     }

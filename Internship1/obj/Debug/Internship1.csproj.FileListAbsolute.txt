@@ -89,3 +89,15 @@ C:\Users\Korisnik\source\repos\Internship1\Internship1\bin\Microsoft.Bcl.AsyncIn
 C:\Users\Korisnik\source\repos\Internship1\Internship1\bin\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Korisnik\source\repos\Internship1\Internship1\bin\System.Threading.Tasks.Extensions.xml
 C:\Users\Korisnik\source\repos\Internship1\Internship1\obj\Debug\Internship1.csprojAssemblyReference.cache
+C:\Users\Korisnik\source\repos\Internship1\Internship1\bin\System.Buffers.dll
+C:\Users\Korisnik\source\repos\Internship1\Internship1\bin\System.Memory.dll
+C:\Users\Korisnik\source\repos\Internship1\Internship1\bin\System.Numerics.Vectors.dll
+C:\Users\Korisnik\source\repos\Internship1\Internship1\bin\System.Text.Encodings.Web.dll
+C:\Users\Korisnik\source\repos\Internship1\Internship1\bin\System.Text.Json.dll
+C:\Users\Korisnik\source\repos\Internship1\Internship1\bin\System.ValueTuple.dll
+C:\Users\Korisnik\source\repos\Internship1\Internship1\bin\System.Buffers.xml
+C:\Users\Korisnik\source\repos\Internship1\Internship1\bin\System.Memory.xml
+C:\Users\Korisnik\source\repos\Internship1\Internship1\bin\System.Numerics.Vectors.xml
+C:\Users\Korisnik\source\repos\Internship1\Internship1\bin\System.Text.Encodings.Web.xml
+C:\Users\Korisnik\source\repos\Internship1\Internship1\bin\System.Text.Json.xml
+C:\Users\Korisnik\source\repos\Internship1\Internship1\bin\System.ValueTuple.xml
