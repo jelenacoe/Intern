@@ -1,0 +1,77 @@
+[
+  {
+    "ID": 1024,
+    "TITLE": "Dummy oxygen too high (pt).",
+    "DETAILS": "The oxygen level increased above 6%. The inlet temperature and the pump were shut down for safety reasons. (pt)."
+  },
+  {
+    "ID": 1025,
+    "TITLE": "Dummy message 1 (pt).",
+    "DETAILS": "Warning message that has to be acknowledged manually and contains parameter 1 (temperature): {0} {1}. (pt)."
+  },
+  {
+    "ID": 1026,
+    "TITLE": "Dummy message 2 (pt).",
+    "DETAILS": "Message that is visible for short period of time. (pt)."
+  },
+  {
+    "ID": 1027,
+    "TITLE": "Dummy message 3 (pt).",
+    "DETAILS": "Info message that is visible until it's acknowledged by simulator. (pt)."
+  },
+  {
+    "ID": 1028,
+    "TITLE": "Dummy message 4 (pt).",
+    "DETAILS": "Error message that contains all parameters and it's acknowledged by simulator. P1 {0}{1} | P2 {2}{3} | P3 {4}{5}. (pt)."
+  },
+  {
+    "ID": 1029,
+    "TITLE": "Dummy message 5 (pt).",
+    "DETAILS": "Message that is not visible in a message list but it's added to DB. (pt)."
+  },
+  {
+    "ID": 20000,
+    "TITLE": "Product temperature sensor not plugged",
+    "DETAILS": "Check connection of product temperature sensor"
+  },
+  {
+    "ID": 20001,
+    "TITLE": "Product temperature sensor signal invalid",
+    "DETAILS": "Product temperature sensor detected but sensor signal wrong. Measured PT1000 resistance: {0}{1}"
+  },
+  {
+    "ID": 20002,
+    "TITLE": "Product temperature sensor detected",
+    "DETAILS": "Product temperature sensor was plugged in"
+  },
+  {
+    "ID": 20003,
+    "TITLE": "Product temperature exceeded",
+    "DETAILS": "The measured product temperature {0}{1} was higher than {2}{3}"
+  },
+  {
+    "ID": 20004,
+    "TITLE": "Product temperature no reaction",
+    "DETAILS": "The product temperature shows no reaction. The current measured product temperature is {0}{1}. "
+  },
+  {
+    "ID": 20005,
+    "TITLE": "Outlet temperature sensor not plugged",
+    "DETAILS": "Check connection of outlet temperature sensor"
+  },
+  {
+    "ID": 20006,
+    "TITLE": "Outlet temperature sensor signal invalid",
+    "DETAILS": "Outlet temperature sensor detected but sensor signal wrong. Measured PT1000 resistance: {0}{1}"
+  },
+  {
+    "ID": 20007,
+    "TITLE": "Outlet temperature exceeded",
+    "DETAILS": "The measured outlet temperature {0}{1} was higher than {2}{3}"
+  },
+  {
+    "ID": 20008,
+    "TITLE": "Outlet temperature no reaction",
+    "DETAILS": "The outlet temperature shows no reaction even if the heater is switched on. The current measured outlet temperature {0}{1}"
+  }
+]
