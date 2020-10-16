@@ -51,15 +51,7 @@ namespace Internship1.Controllers
             ViewBag.jsonpt = ExportJson.Export(pt, listOfPaths[6]);
             ViewBag.jsonru = ExportJson.Export(ru, listOfPaths[7]);
             ViewBag.jsonzh = ExportJson.Export(zh, listOfPaths[8]);
-            //ViewBag.jsonen = ExportJson.ExportJSONEn(en);
-            //ViewBag.jsonde = ExportJson.ExportJSONDe(de);
-            //ViewBag.jsones = ExportJson.ExportJSONEs(es);
-            //ViewBag.jsonfr = ExportJson.ExportJSONFr(fr);
-            //ViewBag.jsonit = ExportJson.ExportJSONIt(it);
-            //ViewBag.jsonja = ExportJson.ExportJSONJa(ja);
-            //ViewBag.jsonpt = ExportJson.ExportJSONPt(pt);
-            //ViewBag.jsonru = ExportJson.ExportJSONRu(ru);
-            //ViewBag.jsonzh = ExportJson.ExportJSONZh(zh);
+           
 
             return View();
         }
