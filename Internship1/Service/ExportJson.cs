@@ -17,7 +17,6 @@ namespace Internship1.Service
     public class ExportJson
     {
       
-        
         public static string Export(List<ExportModel> model, string path)
         {
 
@@ -25,8 +24,6 @@ namespace Internship1.Service
             {
                 NullValueHandling = NullValueHandling.Ignore
             });
-
-            //var serializedResult = System.Text.Json.JsonSerializer.SerializeObject(model);
 
             System.IO.File.WriteAllText(path, jsonIgnoreNullValues);
             return jsonIgnoreNullValues;

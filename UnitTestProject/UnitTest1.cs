@@ -14,16 +14,13 @@ namespace UnitTestProject
         [TestMethod]
         public void MessageDefinitionContorllerTest()
         {
-            MessageDefinitionController controller = new MessageDefinitionController();
-            var result = controller.Index() as ViewResult;
-            Assert.AreEqual("Index", result.ViewName);
+           
 
         }
         [TestMethod]
         public void HomeContorllerTest()
         {
-            var controller = new HomeController();
-            var result = controller.Index() as ViewResult;
+           
 
 
         }
@@ -35,12 +32,9 @@ namespace UnitTestProject
         public void Import() 
         {
 
-            Import imp = new Import();
+           
         
         }
-        
-
-
     }
     [TestClass]
     public class UnitTest3

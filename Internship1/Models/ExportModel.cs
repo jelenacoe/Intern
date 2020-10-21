@@ -19,5 +19,5 @@ namespace Internship1.Models
             string TITLE=title;
             string DETAILS=details;
         }
-        }
+    }
 }

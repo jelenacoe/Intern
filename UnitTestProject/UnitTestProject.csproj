@@ -140,7 +140,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contollers\UnitTestController.cs" />
+    <Compile Include="Contollers\MessageDefinitionControllerTest.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

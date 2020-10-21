@@ -27,7 +27,11 @@ else
     <pre>
         @ViewBag.jsonen
     </pre>
-    <button>Download</button>
+    <form action="./Download/@ViewBag.path" method="post" enctype="multipart/form-data">
+        
+        <input type="submit"  title="Download" >
+    </form>
+
     <pre>
         @ViewBag.jsonde
     </pre>

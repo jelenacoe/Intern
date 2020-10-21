@@ -13,6 +13,37 @@ namespace Internship1.Service
 {
     public class Import
     {
+       /* private const int m_iLangaugesCount = 9;
+        private const int m_iFirstIndex = 7;
+
+        public enum Lang
+        {
+            en = m_iFirstIndex,
+            de,
+            fr,
+            ja,
+        }*/
+
+        /*public static List<ExportModel> ImportFile(string csv_file_path, Lang language)
+        {
+            //string csv_file_path = @"C:\Users\Korisnik\Desktop\Posao\Internship - Execom\ExportModel.csv";
+            string[] lines = System.IO.File.ReadAllLines(csv_file_path);
+            ExportModels = new List<ExportModel>();
+            for (int i = 1; i < lines.Length; i++)
+            {
+                string[] line = lines[i].Split(',');
+                ExportModel obj = new ExportModel()
+                {
+                    ID = Convert.ToInt32(line[0]),
+                    TITLE = line[(int)language],
+                    DETAILS = line[(int)language + m_iLangaugesCount]
+                };
+                ExportModels.Add(obj);
+            }
+
+            return ExportModels;
+        }*/
+
         public static List<ExportModel> ExportModels;
         public static List<ExportModel> ImportFileEn(string csv_file_path)
         {
@@ -68,7 +99,6 @@ namespace Internship1.Service
             for (int i = 1; i < lines.Length; i++)
             {
                 string[] line = lines[i].Split(',');
-               // ExportModel obj = new ExportModel(Convert.ToInt32(line[0]), line[9], line[18]);
                 ExportModel obj = new ExportModel()
                 {
                     ID = Convert.ToInt32(line[0]),
