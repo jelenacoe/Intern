@@ -13,39 +13,38 @@ namespace Internship1.Service
 {
     public class ImportService
     {
-
+       
 
         public static List<ExportModel> ExportModels;
         public static List<ExportModel> ImportFileEn(string[] lines)
         {
-            //string csv_file_path = @"C:\Users\Korisnik\Desktop\Posao\Internship - Execom\ExportModel.csv";
-
+           
             ExportModels = new List<ExportModel>();
             for (int i = 1; i < lines.Length; i++)
             {
                 string[] line = lines[i].Split(',');
-                //ExportModel obj = new ExportModel(Convert.ToInt32(line[0].ToString()), line[7], line[16]);
+                
 
-                ExportModel obj = new ExportModel()
-                {
-                    ID = Convert.ToInt32(line[0]),
-                    TITLE = line[7],
-                    DETAILS = line[16]
-                };
+                 ExportModel obj = new ExportModel()
+                 {
+                     ID = Convert.ToInt32(line[0]),
+                     TITLE = line[7],
+                     DETAILS = line[16]
+                 };
                 ExportModels.Add(obj);
             }
-
+            
             return ExportModels;
 
-
+ 
         }
-        public static List<ExportModel> ImportFileDe(string[] lines)
+        public static List<ExportModel> ImportFileDe(string[] lines) 
         {
             ExportModels = new List<ExportModel>();
             for (int i = 1; i < lines.Length; i++)
             {
                 string[] line = lines[i].Split(',');
-                //ExportModel obj = new ExportModel(Convert.ToInt32(line[0]), line[8], line[17]);
+                
                 ExportModel obj = new ExportModel()
                 {
                     ID = Convert.ToInt32(line[0]),
@@ -58,7 +57,7 @@ namespace Internship1.Service
 
                 ExportModels.Add(obj);
             }
-
+            
 
             return ExportModels;
         }
@@ -74,21 +73,8 @@ namespace Internship1.Service
                     TITLE = line[9],
                     DETAILS = line[18]
                 };
-                /* ExportModel obj = new ExportModel()
-                 {
-                     Number = Convert.ToInt32(line[0]),
-                     DisplayTitle = new DisplayTitle()
-                     { 
-                         Es = line[9]
-                     },
-                     DisplayDetails = new DisplayDetails()
-                     {
-                         Es = line[18]
-                     }
-
-
-
-                 };*/
+               
+                 
                 ExportModels.Add(obj);
             }
 
@@ -102,7 +88,6 @@ namespace Internship1.Service
             for (int i = 1; i < lines.Length; i++)
             {
                 string[] line = lines[i].Split(',');
-                // ExportModel obj = new ExportModel(Convert.ToInt32(line[0]), line[10], line[19]);
                 ExportModel obj = new ExportModel()
                 {
                     ID = Convert.ToInt32(line[0]),
@@ -120,7 +105,6 @@ namespace Internship1.Service
             for (int i = 1; i < lines.Length; i++)
             {
                 string[] line = lines[i].Split(',');
-                //ExportModel obj = new ExportModel(Convert.ToInt32(line[0]), line[11], line[20]);
                 ExportModel obj = new ExportModel()
                 {
                     ID = Convert.ToInt32(line[0]),
@@ -132,14 +116,13 @@ namespace Internship1.Service
 
             return ExportModels;
         }
-
+        
         public static List<ExportModel> ImportFileJa(string[] lines)
         {
             ExportModels = new List<ExportModel>();
             for (int i = 1; i < lines.Length; i++)
             {
                 string[] line = lines[i].Split(',');
-                //ExportModel obj = new ExportModel(Convert.ToInt32(line[0]), line[12], line[21]);
                 ExportModel obj = new ExportModel()
                 {
                     ID = Convert.ToInt32(line[0]),
@@ -158,7 +141,6 @@ namespace Internship1.Service
             for (int i = 1; i < lines.Length; i++)
             {
                 string[] line = lines[i].Split(',');
-                //ExportModel obj = new ExportModel(Convert.ToInt32(line[0]), line[13], line[22]);
                 ExportModel obj = new ExportModel()
                 {
                     ID = Convert.ToInt32(line[0]),
@@ -170,13 +152,12 @@ namespace Internship1.Service
 
             return ExportModels;
         }
-        public static List<ExportModel> ImportFileRu(string[] lines)
-        {
+            public static List<ExportModel> ImportFileRu(string[] lines)
+            {
             ExportModels = new List<ExportModel>();
             for (int i = 1; i < lines.Length; i++)
             {
                 string[] line = lines[i].Split(',');
-                //ExportModel obj = new ExportModel(Convert.ToInt32(line[0]), line[14], line[23]);
                 ExportModel obj = new ExportModel()
                 {
                     ID = Convert.ToInt32(line[0]),
@@ -195,7 +176,6 @@ namespace Internship1.Service
             for (int i = 1; i < lines.Length; i++)
             {
                 string[] line = lines[i].Split(',');
-                //ExportModel obj = new ExportModel(Convert.ToInt32(line[0]), line[15], line[24]);
                 ExportModel obj = new ExportModel()
                 {
                     ID = Convert.ToInt32(line[0]),
@@ -209,5 +189,5 @@ namespace Internship1.Service
         }
 
     }
-
+          
 }

@@ -15,7 +15,6 @@ namespace Internship1
 
           
 
-
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

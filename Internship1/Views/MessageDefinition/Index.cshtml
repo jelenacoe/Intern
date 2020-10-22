@@ -14,7 +14,7 @@ else
 {
 
     var a = Context.Request.Url.AbsoluteUri.Split('/'); //
-    if (a[a.Length - 1] == "MessageDefinition")
+    if (a[a.Length-1] == "MessageDefinition")
     {
         Response.Redirect(Context.Request.Url.AbsoluteUri + "/Index");
     }

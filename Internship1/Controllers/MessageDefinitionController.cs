@@ -36,7 +36,7 @@ namespace Internship1.Controllers
 
         // GET: File download
 
-        public void Resolve(string text, string filename)
+        public void Resolve(string text,string filename)
         {
             if (filename == null)
                 filename = "file";
@@ -51,17 +51,15 @@ namespace Internship1.Controllers
 
         public ActionResult Index(string path)
         {
-
+    
             if (path != null)
             {
 
                 string fileName = Path.GetFileName(path);
-                try
-                {
-                    path = Path.Combine(Server.MapPath("~/App_Data/uploads/"), fileName);
-                }
-                catch (Exception) { }
-
+                try {
+                path = Path.Combine(Server.MapPath("~/App_Data/uploads/"), fileName);
+                }catch(Exception) {}
+              
                 string[] lines = reader.readFile(path);
                 ViewBag.name = path;
                 List<ExportModel> en = Service.ImportService.ImportFileEn(lines);
@@ -87,14 +85,18 @@ namespace Internship1.Controllers
 
 
             }
-          
+            /*UserDownload endownload = new UserDownload();
+            endownload.Download_Click(en,);*/
+
+
+
             return View();
         }
 
         [HttpPost]
         public ActionResult Read(HttpPostedFileBase file)
         {
-            
+            //potencial case 
             string fileName = Path.GetFileName(file.FileName);
             string path = Path.Combine(Server.MapPath("~/App_Data/uploads/"), fileName);
             file.SaveAs(path);
@@ -103,6 +105,13 @@ namespace Internship1.Controllers
 
 
         }
+
+
+
+        // Intereface for mocking
+
+
+
 
 
     }
