@@ -14,6 +14,8 @@ using Internship1.Models;
 
 namespace Internship1.Service
 {
+    //In this class we are formatting .json 
+    //Avoiding null values
     public class ExportJson
     {
       

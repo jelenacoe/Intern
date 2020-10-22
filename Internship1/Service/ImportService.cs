@@ -14,7 +14,8 @@ namespace Internship1.Service
     public class ImportService
     {
        
-
+        //We index what we need with "ExportModel"
+        //For each language index
         public static List<ExportModel> ExportModels;
         public static List<ExportModel> ImportFileEn(string[] lines)
         {
