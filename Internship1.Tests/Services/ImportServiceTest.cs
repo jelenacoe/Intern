@@ -91,6 +91,94 @@ namespace Internship1.Tests.Service
             
 
         }
+        [Test]
+        public void ImportFileDeTestExeption()
+        {
+
+            // Assert
+            Assert.Throws<FormatException>(
+                () => Internship1.Service.ImportService.ImportFileDe(new string[] { "", "" })
+                );
+
+
+        }
+        [Test]
+        public void ImportFileEsTestExeption()
+        {
+
+            // Assert
+            Assert.Throws<FormatException>(
+                () => Internship1.Service.ImportService.ImportFileEs(new string[] { "", "" })
+                );
+
+
+        }
+        [Test]
+        public void ImportFileFrTestExeption()
+        {
+
+            // Assert
+            Assert.Throws<FormatException>(
+                () => Internship1.Service.ImportService.ImportFileFr(new string[] { "", "" })
+                );
+
+
+        }
+        [Test]
+        public void ImportFileItTestExeption()
+        {
+
+            // Assert
+            Assert.Throws<FormatException>(
+                () => Internship1.Service.ImportService.ImportFileIt(new string[] { "", "" })
+                );
+
+
+        }
+        [Test]
+        public void ImportFileJaTestExeption()
+        {
+
+            // Assert
+            Assert.Throws<FormatException>(
+                () => Internship1.Service.ImportService.ImportFileJa(new string[] { "", "" })
+                );
+
+
+        }
+        [Test]
+        public void ImportFilePtTestExeption()
+        {
+
+            // Assert
+            Assert.Throws<FormatException>(
+                () => Internship1.Service.ImportService.ImportFilePt(new string[] { "", "" })
+                );
+
+
+        }
+        [Test]
+        public void ImportFileRuTestExeption()
+        {
+
+            // Assert
+            Assert.Throws<FormatException>(
+                () => Internship1.Service.ImportService.ImportFileRu(new string[] { "", "" })
+                );
+
+
+        }
+        [Test]
+        public void ImportFileZhTestExeption()
+        {
+
+            // Assert
+            Assert.Throws<FormatException>(
+                () => Internship1.Service.ImportService.ImportFileZh(new string[] { "", "" })
+                );
+
+
+        }
 
 
 
