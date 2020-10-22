@@ -4,35 +4,75 @@ using System.Web.Mvc;
 using Internship1.Models;
 using System.IO;
 using Internship1.Service;
+using System;
+using Internship1.Interfaces;
 
 namespace Internship1.Controllers
 {
     public class MessageDefinitionController : Controller
     {
-        
-        public ActionResult Download(string path)
+        private IReadInterface reader;
+
+        public class FileReader : IReadInterface
         {
-            //string fileName = Path.GetFileName(file.FileName);
-            // string path = Path.Combine(Server.MapPath("~/App_Data/uploads/"), fileName);
-            return File(path, "text/json", "File Result.json");
+            public string[] readFile(string path)
+            {
+
+                string[] lines = System.IO.File.ReadAllLines(path);
+                return lines;
+            }
         }
 
-        // GET: MessageDefinition
+        public MessageDefinitionController()
+        {
+            this.reader = new FileReader();
+        }
+
+        public MessageDefinitionController(IReadInterface fileReader)
+        {
+            this.reader = fileReader;
+        }
+
+
+        // GET: File download
+
+        public void Resolve(string text, string filename)
+        {
+            if (filename == null)
+                filename = "file";
+            Response.Clear();
+            Response.AppendHeader("Content-Disposition", "attachment; filename=" + filename + ".json");
+            Response.AppendHeader("Content-Length", text.Length.ToString());
+            Response.ContentType = "text/json";
+            Response.Write(text);
+            Response.Flush();
+        }
+
+
         public ActionResult Index(string path)
         {
-            
+
             if (path != null)
             {
+
+                string fileName = Path.GetFileName(path);
+                try
+                {
+                    path = Path.Combine(Server.MapPath("~/App_Data/uploads/"), fileName);
+                }
+                catch (Exception) { }
+
+                string[] lines = reader.readFile(path);
                 ViewBag.name = path;
-                List<ExportModel> en = Service.Import.ImportFileEn(path);
-                List<ExportModel> de = Service.Import.ImportFileDe(path);
-                List<ExportModel> es = Service.Import.ImportFileEs(path);
-                List<ExportModel> fr = Service.Import.ImportFileFr(path);
-                List<ExportModel> it = Service.Import.ImportFileIt(path);
-                List<ExportModel> ja = Service.Import.ImportFileJa(path);
-                List<ExportModel> pt = Service.Import.ImportFilePt(path);
-                List<ExportModel> ru = Service.Import.ImportFileRu(path);
-                List<ExportModel> zh = Service.Import.ImportFileZh(path);
+                List<ExportModel> en = Service.ImportService.ImportFileEn(lines);
+                List<ExportModel> de = Service.ImportService.ImportFileDe(lines);
+                List<ExportModel> es = Service.ImportService.ImportFileEs(lines);
+                List<ExportModel> fr = Service.ImportService.ImportFileFr(lines);
+                List<ExportModel> it = Service.ImportService.ImportFileIt(lines);
+                List<ExportModel> ja = Service.ImportService.ImportFileJa(lines);
+                List<ExportModel> pt = Service.ImportService.ImportFilePt(lines);
+                List<ExportModel> ru = Service.ImportService.ImportFileRu(lines);
+                List<ExportModel> zh = Service.ImportService.ImportFileZh(lines);
 
                 ViewBag.jsonen = ExportJson.Export(en, path);
                 ViewBag.jsonde = ExportJson.Export(de, path);
@@ -44,33 +84,26 @@ namespace Internship1.Controllers
                 ViewBag.jsonru = ExportJson.Export(ru, path);
                 ViewBag.jsonzh = ExportJson.Export(zh, path);
 
-                //return File(path, "text/json", "File Result.json"));
+
+
             }
-            /*UserDownload endownload = new UserDownload();
-            endownload.Download_Click(en,);*/
-
-
-
-
-
+          
             return View();
         }
 
         [HttpPost]
         public ActionResult Read(HttpPostedFileBase file)
         {
-            //potencial case 
+            
             string fileName = Path.GetFileName(file.FileName);
             string path = Path.Combine(Server.MapPath("~/App_Data/uploads/"), fileName);
             file.SaveAs(path);
-            
+
             return RedirectToAction("Index", new { path = path });
 
 
         }
-        
-      
-        
 
-    }  
+
+    }
 }

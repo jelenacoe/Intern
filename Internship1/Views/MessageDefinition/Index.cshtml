@@ -10,59 +10,72 @@
     <p>@ViewBag.path</p>
 
 }
-else 
+else
 {
-   <div>
-       <form action="./Read" method="post" enctype="multipart/form-data">
-           <div class="form-group">
-               <label for="exampleFormControlFile1">Choose a file</label>
-               <input type="file" class="form-control-file" id="exampleFormControlFile1" name="file">
-           </div>
-           <input type="submit">
-       </form>
-   </div>
+
+    var a = Context.Request.Url.AbsoluteUri.Split('/'); //
+    if (a[a.Length - 1] == "MessageDefinition")
+    {
+        Response.Redirect(Context.Request.Url.AbsoluteUri + "/Index");
+    }
+
+    <div>
+        <form action="./Read" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="exampleFormControlFile1">Choose a file</label>
+                <input type="file" class="form-control-file" id="exampleFormControlFile1" name="file">
+            </div>
+            <input type="submit">
+        </form>
+    </div>
 }
 
 <div>
     <pre>
         @ViewBag.jsonen
     </pre>
-    <form action="./Download/@ViewBag.path" method="post" enctype="multipart/form-data">
-        
-        <input type="submit"  title="Download" >
-    </form>
 
+    <a target="_blank" href="@Url.Action("Resolve","MessageDefinition" , new {text=@ViewBag.jsonen, filename="en"}) "
+       class="btn btn-primary">Download</a>
     <pre>
         @ViewBag.jsonde
     </pre>
-    <button>Download</button>
+    <a target="_blank" href="@Url.Action("Resolve","MessageDefinition" , new {text=@ViewBag.jsonde, filename="de"}) "
+       class="btn btn-primary ">Download</a>
     <pre>
         @ViewBag.jsones
     </pre>
-    <button>Download</button>
+    <a target="_blank" href="@Url.Action("Resolve","MessageDefinition" , new {text=@ViewBag.jsones, filename="es"}) "
+       class="btn btn-primary ">Download</a>
     <pre>
         @ViewBag.jsonfr
     </pre>
-    <button>Download</button>
+    <a target="_blank" href="@Url.Action("Resolve","MessageDefinition" , new {text=@ViewBag.jsonfr, filename="fr"}) "
+       class="btn btn-primary ">Download</a>
     <pre>
         @ViewBag.jsonit
     </pre>
-    <button>Download</button>
+    <a target="_blank" href="@Url.Action("Resolve","MessageDefinition" , new {text=@ViewBag.jsonit, filename="it"}) "
+       class="btn btn-primary ">Download</a>
     <pre>
         @ViewBag.jsonja
     </pre>
-    <button>Download</button>
+    <a target="_blank" href="@Url.Action("Resolve","MessageDefinition" , new {text=@ViewBag.jsonja, filename="ja"}) "
+       class="btn btn-primary ">Download</a>
     <pre>
         @ViewBag.jsonpt
     </pre>
-    <button>Download</button>
+    <a target="_blank" href="@Url.Action("Resolve","MessageDefinition" , new {text=@ViewBag.jsonpt, filename="pt"}) "
+       class="btn btn-primary ">Download</a>
     <pre>
         @ViewBag.jsonru
     </pre>
-    <button>Download</button>
+    <a target="_blank" href="@Url.Action("Resolve","MessageDefinition" , new {text=@ViewBag.jsonru, filename="ru"}) "
+       class="btn btn-primary ">Download</a>
     <pre>
         @ViewBag.jsonzh
     </pre>
-    <button>Download</button>
+    <a target="_blank" href="@Url.Action("Resolve","MessageDefinition" , new {text=@ViewBag.jsonzh, filename="zh"}) "
+       class="btn btn-primary ">Download</a>
 </div>
 

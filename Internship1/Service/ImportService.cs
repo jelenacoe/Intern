@@ -11,66 +11,36 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace Internship1.Service
 {
-    public class Import
+    public class ImportService
     {
-       /* private const int m_iLangaugesCount = 9;
-        private const int m_iFirstIndex = 7;
 
-        public enum Lang
-        {
-            en = m_iFirstIndex,
-            de,
-            fr,
-            ja,
-        }*/
-
-        /*public static List<ExportModel> ImportFile(string csv_file_path, Lang language)
-        {
-            //string csv_file_path = @"C:\Users\Korisnik\Desktop\Posao\Internship - Execom\ExportModel.csv";
-            string[] lines = System.IO.File.ReadAllLines(csv_file_path);
-            ExportModels = new List<ExportModel>();
-            for (int i = 1; i < lines.Length; i++)
-            {
-                string[] line = lines[i].Split(',');
-                ExportModel obj = new ExportModel()
-                {
-                    ID = Convert.ToInt32(line[0]),
-                    TITLE = line[(int)language],
-                    DETAILS = line[(int)language + m_iLangaugesCount]
-                };
-                ExportModels.Add(obj);
-            }
-
-            return ExportModels;
-        }*/
 
         public static List<ExportModel> ExportModels;
-        public static List<ExportModel> ImportFileEn(string csv_file_path)
+        public static List<ExportModel> ImportFileEn(string[] lines)
         {
             //string csv_file_path = @"C:\Users\Korisnik\Desktop\Posao\Internship - Execom\ExportModel.csv";
-            string[] lines = System.IO.File.ReadAllLines(csv_file_path);
+
             ExportModels = new List<ExportModel>();
             for (int i = 1; i < lines.Length; i++)
             {
                 string[] line = lines[i].Split(',');
                 //ExportModel obj = new ExportModel(Convert.ToInt32(line[0].ToString()), line[7], line[16]);
 
-                 ExportModel obj = new ExportModel()
-                 {
-                     ID = Convert.ToInt32(line[0]),
-                     TITLE = line[7],
-                     DETAILS = line[16]
-                 };
+                ExportModel obj = new ExportModel()
+                {
+                    ID = Convert.ToInt32(line[0]),
+                    TITLE = line[7],
+                    DETAILS = line[16]
+                };
                 ExportModels.Add(obj);
             }
 
             return ExportModels;
 
- 
+
         }
-        public static List<ExportModel> ImportFileDe(string csv_file_path) 
+        public static List<ExportModel> ImportFileDe(string[] lines)
         {
-            string[] lines = System.IO.File.ReadAllLines(csv_file_path);
             ExportModels = new List<ExportModel>();
             for (int i = 1; i < lines.Length; i++)
             {
@@ -88,13 +58,12 @@ namespace Internship1.Service
 
                 ExportModels.Add(obj);
             }
-            
+
 
             return ExportModels;
         }
-        public static List<ExportModel> ImportFileEs(string csv_file_path)
+        public static List<ExportModel> ImportFileEs(string[] lines)
         {
-            string[] lines = System.IO.File.ReadAllLines(csv_file_path);
             ExportModels = new List<ExportModel>();
             for (int i = 1; i < lines.Length; i++)
             {
@@ -127,9 +96,8 @@ namespace Internship1.Service
 
         }
 
-        public static List<ExportModel> ImportFileFr(string csv_file_path)
+        public static List<ExportModel> ImportFileFr(string[] lines)
         {
-            string[] lines = System.IO.File.ReadAllLines(csv_file_path);
             ExportModels = new List<ExportModel>();
             for (int i = 1; i < lines.Length; i++)
             {
@@ -146,9 +114,8 @@ namespace Internship1.Service
 
             return ExportModels;
         }
-        public static List<ExportModel> ImportFileIt(string csv_file_path)
+        public static List<ExportModel> ImportFileIt(string[] lines)
         {
-            string[] lines = System.IO.File.ReadAllLines(csv_file_path);
             ExportModels = new List<ExportModel>();
             for (int i = 1; i < lines.Length; i++)
             {
@@ -165,10 +132,9 @@ namespace Internship1.Service
 
             return ExportModels;
         }
-        
-        public static List<ExportModel> ImportFileJa(string csv_file_path)
+
+        public static List<ExportModel> ImportFileJa(string[] lines)
         {
-            string[] lines = System.IO.File.ReadAllLines(csv_file_path);
             ExportModels = new List<ExportModel>();
             for (int i = 1; i < lines.Length; i++)
             {
@@ -186,9 +152,8 @@ namespace Internship1.Service
             return ExportModels;
 
         }
-        public static List<ExportModel> ImportFilePt(string csv_file_path)
+        public static List<ExportModel> ImportFilePt(string[] lines)
         {
-            string[] lines = System.IO.File.ReadAllLines(csv_file_path);
             ExportModels = new List<ExportModel>();
             for (int i = 1; i < lines.Length; i++)
             {
@@ -205,9 +170,8 @@ namespace Internship1.Service
 
             return ExportModels;
         }
-            public static List<ExportModel> ImportFileRu(string csv_file_path)
-            {
-            string[] lines = System.IO.File.ReadAllLines(csv_file_path);
+        public static List<ExportModel> ImportFileRu(string[] lines)
+        {
             ExportModels = new List<ExportModel>();
             for (int i = 1; i < lines.Length; i++)
             {
@@ -225,9 +189,8 @@ namespace Internship1.Service
 
             return ExportModels;
         }
-        public static List<ExportModel> ImportFileZh(string csv_file_path)
+        public static List<ExportModel> ImportFileZh(string[] lines)
         {
-            string[] lines = System.IO.File.ReadAllLines(csv_file_path);
             ExportModels = new List<ExportModel>();
             for (int i = 1; i < lines.Length; i++)
             {
@@ -246,5 +209,5 @@ namespace Internship1.Service
         }
 
     }
-          
+
 }
