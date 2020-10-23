@@ -12,7 +12,7 @@ namespace Internship1.Controllers
     public class MessageDefinitionController : Controller
     {
         private IReadInterface reader;
-
+        //User gets the file in default download folder
         public class FileReader : IReadInterface
         {
             public string[] readFile(string path)
@@ -85,18 +85,16 @@ namespace Internship1.Controllers
 
 
             }
-            /*UserDownload endownload = new UserDownload();
-            endownload.Download_Click(en,);*/
-
+            
 
 
             return View();
         }
-
+        //User chooses file
         [HttpPost]
         public ActionResult Read(HttpPostedFileBase file)
         {
-            //potencial case 
+            
             string fileName = Path.GetFileName(file.FileName);
             string path = Path.Combine(Server.MapPath("~/App_Data/uploads/"), fileName);
             file.SaveAs(path);
@@ -105,13 +103,6 @@ namespace Internship1.Controllers
 
 
         }
-
-
-
-        // Intereface for mocking
-
-
-
 
 
     }

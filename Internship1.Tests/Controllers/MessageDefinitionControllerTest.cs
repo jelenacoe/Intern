@@ -27,7 +27,7 @@ namespace Internship1.Tests.Controllers
         }
         
 
-        Mock<IReadInterface> mock; // Mock treba zbog menjanje ponasanje funkcije
+        Mock<IReadInterface> mock; 
 
 
         [Test]
