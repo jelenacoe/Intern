@@ -27,7 +27,7 @@ namespace Internship1.Service
                 NullValueHandling = NullValueHandling.Ignore
             });
 
-            System.IO.File.WriteAllText(path, jsonIgnoreNullValues);
+           // System.IO.File.WriteAllText(path, jsonIgnoreNullValues);
             return jsonIgnoreNullValues;
         }
 
